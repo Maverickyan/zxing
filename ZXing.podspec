@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target         = '5.0'
   s.osx.deployment_target         = '10.7'
 
-  s.source_files                = '*/*.{h,m}'
+  s.source_files                = 'ZXing/**/*.{h,m}'
   s.requires_arc                = true
 
   s.frameworks                  = 'ImageIO', 'CoreGraphics', 'CoreVideo', 'CoreMedia', 'QuartzCore', 'AVFoundation', 'AudioToolbox'
