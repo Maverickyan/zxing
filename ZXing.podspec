@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                        = "ZXing for iOS"
+  s.name                        = "ZXing"
   s.version                     = "1."
   s.summary                     = "An Objective-C Port of ZXing."
   s.homepage                    = "https://github.com/smartwalle/zxing.git"
