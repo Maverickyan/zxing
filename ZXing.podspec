@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 
   s.license                     = { :type => 'Apache License 2.0', :file => 'COPYING' }
 
-  s.source                      = { :git => "https://github.com/smartwalle/zxing.git"}
+  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => s.version.to_s}
   s.ios.deployment_target         = '5.0'
   s.osx.deployment_target         = '10.7'
 
