@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name                        = "ZXing"
-  s.version                     = "1"
+  s.version                     = "3"
   s.summary                     = "Multi-format 1D/2D barcode image processing library."
   s.homepage                    = "https://github.com/smartwalle/zxing"
   s.author                      = "ZXing team (http://code.google.com/p/zxing/people/list)"
   s.license                     = { :type => 'Apache License, Version 2.0', :file => 'COPYING' }
-  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => "1" }
+  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => "3" }
 
   s.preserve_paths              = 'cpp/core/src/zxing/**/*.h', 'objc/src/ZXing/*.h', 'cpp/core/src/bigint/*.hh'
   s.source_files                = 'cpp/core/src/zxing/**/*.cpp', 'objc/src/ZXing/*.{m,mm}', 'cpp/core/src/bigint/*.cc'
