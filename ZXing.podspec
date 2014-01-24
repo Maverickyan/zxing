@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name                        = "ZXing"
   s.version                     = "3"
   s.summary                     = "Multi-format 1D/2D barcode image processing library."
-  s.homepage                    = "http://code.google.com/p/zxing/"
+  s.homepage                    = "https://github.com/smartwalle/zxing"
   s.author                      = "ZXing team (http://code.google.com/p/zxing/people/list)"
   s.license                     = { :type => 'Apache License, Version 2.0', :file => 'COPYING' }
   s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => "3" }
