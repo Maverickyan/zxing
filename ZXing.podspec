@@ -1,28 +1,26 @@
 Pod::Spec.new do |s|
   s.name                        = "ZXing"
   s.version                     = "1"
-  s.summary                     = "An Objective-C Port of ZXing."
-  s.homepage                    = "https://github.com/smartwalle/zxing.git"
-  s.author                      = "SmartWalle"
-
-  s.license                     = { :type => 'Apache License 2.0', :file => 'COPYING' }
+  s.summary                     = "Multi-format 1D/2D barcode image processing library."
+  s.homepage                    = "https://github.com/smartwalle/zxing"
+  s.author                      = "ZXing team (http://code.google.com/p/zxing/people/list)"
+  s.license                     = { :type => 'Apache License, Version 2.0', :file => 'COPYING' }
+  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => "1" }
 
   s.preserve_paths              = 'cpp/core/src/zxing/**/*.h', 'objc/src/ZXing/*.h', 'cpp/core/src/bigint/*.hh'
   s.source_files                = 'cpp/core/src/zxing/**/*.cpp', 'objc/src/ZXing/*.{m,mm}', 'cpp/core/src/bigint/*.cc'
   s.compiler_flags              = '-IZXing/cpp/core/src/ -IZXing/objc/src/'
-  s.ios.deployment_target         = '6.0'
-
-  s.source_files                = 'zxing/**/*'
   s.requires_arc                = false
 
-   s.prefix_header_contents      = <<-EOS
+# workaround for a missing import in objc/src/ZXing/ZXImage.mm
+  s.prefix_header_contents      = <<-EOS
 #ifdef __OBJC__
   #import <ImageIO/CGImageSource.h>
 #endif
-
 EOS
 
-s.xcconfig = {
+  # ZXing won't compile with c++11, default as of Xcode 5
+  s.xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'c++98',
     'CLANG_CXX_LIBRARY' => 'libstdc++'
   }
@@ -45,4 +43,3 @@ s.xcconfig = {
     ios.frameworks              = 'AddressBookUI', 'QuartzCore'
   end
 end
-
