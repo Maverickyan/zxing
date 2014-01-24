@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage                    = "https://github.com/smartwalle/zxing"
   s.author                      = "ZXing team (http://code.google.com/p/zxing/people/list)"
   s.license                     = { :type => 'Apache License, Version 2.0', :file => 'COPYING' }
-  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :tag => "3" }
+  s.source                      = { :git => "https://github.com/smartwalle/zxing.git", :branch=>'master' }
 
   s.preserve_paths              = 'cpp/core/src/zxing/**/*.h', 'objc/src/ZXing/*.h', 'cpp/core/src/bigint/*.hh'
   s.source_files                = 'cpp/core/src/zxing/**/*.cpp', 'objc/src/ZXing/*.{m,mm}', 'cpp/core/src/bigint/*.cc'
